@@ -4,8 +4,8 @@ from PIL import Image
 class ImageProcessor:
 
     def __init__(self):
-        self.IMAGE_HEIGHT = 500
-        self.IMAGE_WIDTH = 500
+        self.IMAGE_HEIGHT = 128
+        self.IMAGE_WIDTH = 128
 
     def resize_image(self, filename):
         img = Image.open(filename)
@@ -13,8 +13,7 @@ class ImageProcessor:
         return resized_image
 
     def greyscale_image(self, filename, greyscale_filename):
-        img = Image.open(filename).convert('LA')
-        img.save(greyscale_filename)
+        img = Image.open(filename).convert('LA') # make image greyscale
         return img
 
 # image_processor = ImageProcessor()
