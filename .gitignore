@@ -286,13 +286,3 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
-
-# Unity-Specific Ignores.
-.DS_Store
-Library
-Temp
-*.csproj
-*.pidb
-*.unityproj
-*.sln
-*.userprefs
