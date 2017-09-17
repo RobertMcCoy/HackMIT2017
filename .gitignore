@@ -287,8 +287,6 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 
-Corpus/
-
 # =============== #
 # Unity generated #
 # =============== #
@@ -326,3 +324,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Corpus/
