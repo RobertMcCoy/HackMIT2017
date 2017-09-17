@@ -12,8 +12,10 @@ class ImageProcessor:
         resized_image = img.resize((self.IMAGE_WIDTH, self.IMAGE_HEIGHT))
         return resized_image
 
-    def greyscale_image(self, filename, greyscale_filename):
-        img = Image.open(filename).convert('LA') # make image greyscale
+    def greyscale_image(self, filename):
+        filename = filename.replace('\\','/')
+        img = Image.open(filename).convert('L') # make image greyscale
+        img.save(filename);
         return img
 
 # image_processor = ImageProcessor()
