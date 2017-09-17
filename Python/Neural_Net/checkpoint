@@ -1,0 +1,2 @@
+model_checkpoint_path: "single_save_for_hololens.ckpt"
+all_model_checkpoint_paths: "single_save_for_hololens.ckpt"
