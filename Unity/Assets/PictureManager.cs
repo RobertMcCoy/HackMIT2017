@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VR.WSA.WebCam;
+using System.Linq;
 
 public class PictureManager : MonoBehaviour {
     PhotoCapture photoCaptureObject = null;
 
 	// Use this for initialization
 	void Start () {
-        PhotoCapture.CreateAsync(false, OnPhotoCaptureCreated);)
+        PhotoCapture.CreateAsync(false, OnPhotoCaptureCreated);
 	}
 	
 	// Update is called once per frame
