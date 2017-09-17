@@ -9,7 +9,7 @@ from keras.preprocessing.image import ImageDataGenerator
 
 #backend.set_image_dim_ordering('th')
 height, width = 640, 480
-epochs = 20
+epochs = 15
 training_samples = 1200
 validation_samples = 450
 
@@ -61,8 +61,4 @@ model.compile(loss='binary_crossentropy', optimizer=sgd, metrics=['accuracy'])
 model.fit_generator(train_generator, samples_per_epoch=training_samples, nb_epoch=epochs,
                     validation_data=validation_generator, nb_val_samples=validation_samples)
 
-model_json = model.to_json()
-with open("models/model.json", "w") as json_file:
-    json_file.write(model_json)
-
-model.save_weights('models/initial-4conv-samples-10-epoch.h5')
+model.save('models/single_save_for_hololens.hdf5')
