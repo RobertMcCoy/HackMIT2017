@@ -61,4 +61,6 @@ model.compile(loss='binary_crossentropy', optimizer=sgd, metrics=['accuracy'])
 model.fit_generator(train_generator, samples_per_epoch=training_samples, nb_epoch=epochs,
                     validation_data=validation_generator, nb_val_samples=validation_samples)
 
-model.save('models/single_save_for_hololens.hdf5')
+model.save_weights('models/model.hdf5')
+with open('model.json', 'w') as f:
+    f.write(model.to_json())
